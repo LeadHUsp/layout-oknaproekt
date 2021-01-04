@@ -1,0 +1,122 @@
+.footer {
+  padding: 3.7rem 0 0;
+  background: #e5e5e5;
+}
+.footer-nav {
+  display: flex;
+  padding-bottom: 4.4rem;
+}
+.footer-nav__item {
+  position: relative;
+  width: 25%;
+}
+.footer-nav__payment {
+  width: width(12, 4);
+  text-align: right;
+}
+.footer-nav__title {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+.footer-nav__qr {
+  max-width: 152px;
+}
+.footer-nav__link {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  &:hover > .nav-link {
+    color: $secondary;
+  }
+}
+.footer-nav__links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-nav__links-payment {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3.3rem;
+}
+.footer-nav__link-payment {
+  margin-right: 20px;
+}
+.nav-link {
+  display: inline-block;
+  transition: all 0.4s ease;
+  padding-bottom: 1rem;
+  z-index: 3000;
+}
+.footer-nav__submenu {
+  &:after {
+    content: '\203A';
+    font-size: 1.8rem;
+    padding-left: 2rem;
+  }
+  &:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.submenu {
+  position: absolute;
+  width: 100%;
+  padding-left: 34px;
+  right: -30%;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+.copyright {
+  padding: 1.7rem 0;
+  background: #3c3c3c;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .footer-nav__item-responsive {
+    padding-right: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer-nav__item {
+    width: 33%;
+  }
+  .footer-nav__payment {
+    text-align: left;
+    width: 100%;
+  }
+  .footer-nav__links-payment {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  .submenu {
+    top: 100%;
+    right: 0;
+    background: #cccccc;
+  }
+}
+@media (max-width: 480px) {
+  .footer-nav__item {
+    width: 50%;
+  }
+  .copyright {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

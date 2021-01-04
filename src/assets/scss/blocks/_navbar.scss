@@ -1,0 +1,118 @@
+.navbar {
+  background: #3e3c3c;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  transition: all 0.4s ease-in;
+}
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.navbar-list__item {
+  position: relative;
+}
+.navbar-list__link {
+  display: flex;
+  align-items: center;
+  padding: 18px 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background: $secondary;
+  }
+}
+.navbar-list__link-submenu::after {
+  content: '\27A4';
+  margin-left: 13px;
+  font-size: 10px;
+  transform: rotate(90deg);
+}
+
+.subnav-list {
+  position: absolute;
+  background: #3e3c3c;
+  left: 0;
+  top: 100%;
+  width: 220px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.navbar-list__icon:hover .navbar-list__item {
+  background: transparent !important;
+}
+.subnav-list-active {
+  max-height: 354px;
+}
+#btn {
+  width: 100%;
+  padding: 10px;
+}
+.cotact-panel__group-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.social-list__link-mobile,
+.work-info-mobile {
+  color: #fff;
+  border-color: #fff;
+}
+.navbar-active {
+  right: 0 !important;
+}
+.city-change-responsive {
+  display: none;
+}
+.city-change__text-responsive {
+  color: #fff;
+}
+@media (max-width: 1100px) {
+  .navbar {
+    position: fixed;
+    width: 40%;
+    right: -40%;
+    top: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 2rem;
+    z-index: 5000;
+  }
+  .navbar-list {
+    padding-top: 2rem;
+    flex-direction: column;
+  }
+  .navbar-list__link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .subnav-list {
+    position: relative;
+    background: #2b2929;
+    width: 100%;
+  }
+  .cotact-panel__group-mobile {
+    display: flex;
+  }
+}
+@media (max-width: 700px) {
+  .navbar {
+    width: 50%;
+    right: -50%;
+  }
+}
+@media (max-width: 500px) {
+  .city-change-responsive {
+    display: flex;
+    max-width: 80%;
+  }
+}
+@media (max-width: 450px) {
+  .navbar {
+    width: 55%;
+    right: -55%;
+  }
+}

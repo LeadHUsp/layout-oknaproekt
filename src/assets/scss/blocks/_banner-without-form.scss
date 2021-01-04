@@ -1,0 +1,25 @@
+.banner__note {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+.banner__subtitle-heavy {
+  font-weight: 800;
+}
+.banner__subtitle-long {
+  max-width: 55%;
+}
+.banner-without-form {
+  padding-bottom: 85px;
+}
+@media (max-width: 960px) {
+  .banner__subtitle-long {
+    max-width: 70%;
+  }
+}
+@media (max-width: 490px) {
+  .banner__subtitle-long {
+    max-width: 90%;
+  }
+}

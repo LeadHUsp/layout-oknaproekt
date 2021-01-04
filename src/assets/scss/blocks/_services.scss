@@ -1,0 +1,77 @@
+.services {
+  padding: 58px width(1920, 80) 89px;
+  background: #fff;
+}
+.services__subtitle {
+  margin-bottom: 18px;
+}
+.services__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.sevices-card {
+  position: relative;
+  width: width(1760, 426);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 18px;
+  min-height: 322px;
+}
+.services-card__layer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+.card-link {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  bottom: 29px;
+  padding-right: 3.2rem;
+  color: #fff;
+  font-weight: 700;
+  justify-content: flex-end;
+  transition: all 0.4s ease;
+  &:hover {
+    color: $secondary;
+    .card-link__icon {
+      border-color: $secondary;
+    }
+  }
+}
+.card-link-services {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+.card-link__text {
+  margin-right: 2.2rem;
+}
+.card-link__icon {
+  border: 2px solid #fff;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.6rem;
+}
+@media (max-width: 1200px) {
+  .sevices-card {
+    width: 33%;
+  }
+}
+@media (max-width: 920px) {
+  .sevices-card {
+    width: 49%;
+  }
+}
+@media (max-width: 550px) {
+  .sevices-card {
+    width: 100%;
+  }
+}

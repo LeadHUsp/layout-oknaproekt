@@ -1,0 +1,368 @@
+.configurator {
+  position: relative;
+  /*   height: 50vh; */
+  min-height: 608px;
+}
+.configurator__bg-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.configurator__inner {
+  position: relative;
+  z-index: 3500;
+  padding: 38px 2.8rem;
+}
+.configurator__title {
+  color: #fff;
+  margin-bottom: 3.2rem;
+}
+#btn-change-bg {
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+.configuration__lamination {
+  display: flex;
+}
+.lamination-thumb {
+  overflow: hidden;
+}
+.lamination-thumb__title {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 16px;
+}
+
+.lamination-thumb__control {
+  display: flex;
+  padding-bottom: 23px;
+}
+.lamination-thumb__btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #fff;
+  background: #37a58c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lamination-thumb__btn-prev {
+  transform: rotate(180deg);
+  margin-right: 17px;
+}
+.lamination-thumb__slides {
+  position: relative;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.lamination-thumb__slide {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  img {
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    width: 100%;
+    height: auto;
+    /*     object-fit: cover; */
+  }
+}
+.lamination-view__slides {
+  position: absolute;
+  left: width(1204, 641);
+  top: 0;
+  width: 233px;
+  height: 608px;
+  background-position: left;
+  background-size: contain;
+}
+.lamination-view__wrapper {
+  position: absolute;
+  width: 185px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.handle-view__wrapper {
+  position: absolute;
+  overflow: hidden;
+
+  right: -26px;
+  top: 157px;
+  width: 113px;
+  height: 313px;
+}
+.window-handle {
+  width: width(286, 214);
+}
+.lamination-view__profiles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.lamination-view__slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+.lamination-thumb__head {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-end;
+}
+.configuration__collumn {
+  width: 50%;
+}
+.configuration__collumn-right {
+  padding-left: width(1204, 365);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  /*   align-items: center; */
+}
+.handle-view {
+  padding-top: 39px;
+  overflow: hidden;
+}
+.handle-view__text {
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.handle-view__text-bold {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.rounded {
+  border-radius: 7px;
+  border: 2px solid #fff;
+}
+.window-handle__thumb {
+  /*   max-width: width(214, 168); */
+
+  position: relative;
+  overflow: hidden;
+  /* .swiper-wrapper {
+    flex-wrap: wrap;
+  } */
+  .swiper-slide {
+    /*     margin-top: 16px;
+    margin-right: 5px; */
+    padding-top: 11px;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 11px);
+      border-radius: 7px;
+      border: 2px solid #fff;
+    }
+  }
+  img {
+    display: block;
+    border-radius: 7px;
+    position: relative;
+  }
+}
+.window-handle {
+  margin-bottom: 72px;
+}
+.window-handle__title {
+  margin-top: 56px;
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #fff;
+}
+.window-handle__thumb {
+  .swiper-slide-thumb-active {
+    &:after {
+      border: 3px solid $secondary;
+    }
+  }
+}
+.btn-change__bg {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 100%;
+  max-width: 196px;
+  padding: 11px 33px;
+  background: #fff;
+  border-radius: 34px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background: $secondary;
+    color: #fff;
+  }
+}
+.configuration-btn {
+  width: 100%;
+  max-width: 196px;
+  text-align: center;
+}
+@media (max-width: 1279px) {
+  .configurator {
+    min-height: 496px;
+  }
+  .configurator__inner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .lamination-view__slides {
+    width: 192px;
+    height: 496px;
+  }
+  .lamination-view__wrapper {
+    width: 151px;
+  }
+  .handle-view__wrapper {
+    right: -32px;
+    top: 124px;
+    width: 109px;
+  }
+}
+@media (max-width: 991.999px) {
+  .configurator {
+    min-height: 415px;
+  }
+  .configurator__inner {
+    padding: 0 !important;
+  }
+  .configuration__collumn {
+    width: 45%;
+  }
+  .configuration__collumn-right {
+    width: 65%;
+  }
+  .window-handle {
+    width: 90%;
+    padding-left: 10%;
+  }
+  .window-handle__title {
+    margin-top: 15px;
+  }
+  .lamination-view__slides {
+    left: 49%;
+    width: 170px;
+    height: 415px;
+  }
+  .lamination-view__wrapper {
+    width: 132px;
+  }
+  .handle-view {
+    padding-top: 15px;
+  }
+  .handle-view__wrapper {
+    width: 86px;
+    height: 268px;
+    right: -20px;
+    top: 110px;
+  }
+}
+@media (max-width: 767.999px) {
+  .configuration__lamination {
+    flex-wrap: wrap;
+  }
+  .configuration__collumn {
+    padding: 10px 15px;
+
+    width: 63%;
+  }
+  .configuration__collumn-right {
+    width: 100%;
+    border-top: 5px dashed $primary;
+  }
+  .lamination-view__slides {
+    left: 66%;
+    height: 446px;
+  }
+  .lamination-view__wrapper {
+    width: 138px;
+  }
+  .handle-view__wrapper {
+    width: 90px;
+
+    right: -24px;
+    top: 113px;
+  }
+  .window-handle {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+  .configuration-btn,
+  .btn-change__bg {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 599px) {
+  .configurator__title {
+    margin-bottom: 15px;
+  }
+  .configuration__collumn {
+    width: 50%;
+  }
+  .configuration__collumn-right {
+    width: 100%;
+  }
+  .lamination-view__slides {
+    left: 54%;
+    width: 154px;
+    height: 408px;
+  }
+  .lamination-view__wrapper {
+    width: 124px;
+  }
+  .handle-view__wrapper {
+    width: 79px;
+    right: -19px;
+    top: 103px;
+  }
+  .lamination-thumb__head {
+    flex-wrap: wrap;
+  }
+  .lamination-thumb__title {
+    padding-bottom: 10px;
+  }
+  .lamination-thumb__control {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 445px) {
+  .lamination-view__slides {
+    left: 50%;
+  }
+}

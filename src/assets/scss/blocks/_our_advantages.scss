@@ -1,0 +1,109 @@
+.our-advantages {
+  padding: 5rem 0;
+  background: #e5e5e5;
+}
+.our-advantages__wrapper {
+  display: grid;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 2.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.our-advantages__item {
+  position: relative;
+  padding: 1rem 1.7rem 1rem 11rem;
+  background: #fff;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  display: flex;
+  z-index: 1000;
+}
+.our-advantages__item-title {
+  padding-top: 1rem;
+  background: transparent;
+  display: block;
+}
+.our-advantages__item-4col {
+  grid-column: span 2;
+}
+.our-advantages__item-6col {
+  grid-column: span 3;
+}
+.our-advantages__item-8col {
+  grid-column: span 4;
+}
+.our-advantages__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 9.1rem;
+  height: 9.1rem;
+  border-radius: 50%;
+  border: 1.5rem solid rgba(55, 165, 140, 0.5);
+  font-size: 3rem;
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transform: translate(-50%, -50%);
+
+  &:before {
+    content: attr(data-num);
+    position: absolute;
+    font-size: 5.4rem;
+    line-height: 7.3rem;
+    font-weight: 800;
+    color: #9bd2c5;
+    left: 100%;
+  }
+}
+.our-advantages__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.our-advantages__text-title {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+}
+.our-advantages__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .from-discount__btn {
+    width: width(383, 261);
+  }
+}
+.our-advantages__mask {
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 5000;
+}
+@media (max-width: 768px) {
+  .our-advantages__item-title,
+  .our-advantages__item,
+  .our-advantages__btn {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 682px) {
+  .our-advantages__item {
+    padding-left: 0;
+  }
+  .our-advantages__icon {
+    position: relative;
+    top: 0;
+    transform: none;
+    &:before {
+      top: -110%;
+      font-size: 4rem;
+    }
+  }
+}
